@@ -17,5 +17,13 @@
             th:text="${'no tiene email'}">
         </li> <!-- If email is null, show 'no tiene email' -->
     </ul>
+
+    <a th:href="@{/list}">View list</a><br>
+    <a th:href="@{'/api/params/foo?message=' + ${title}}">View message</a><br>
+    <a th:href="@{/api/params/foo(message='Hola que tal')}">View other message</a><br>
+    <a th:href="@{/api/params/bar(text='Hola que tal', code=2003)}">View two params</a><br>
+    <a th:href="@{/api/var/baz/ver un path variable}">View path variable</a><br>
+    <a th:href="@{'/api/var/baz/' + ${title}}">View a variable in path variable</a><br>
+    <a th:href="@{'/api/var/baz/' + 'Hola es un texto'}">View a text in path variable</a>
 </body>
 </html>
